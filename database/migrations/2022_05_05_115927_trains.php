@@ -20,10 +20,10 @@ class Trains extends Migration
             $table->string('stazione_di_arrivo', 100);
             $table->time('orario_di_partenza', 0);
             $table->time('orario_di_arrivo', 0);
-            $table->unique('code');
-            $table->smallInteger('nr_carrozze')->nullable();
-            $table->boolean('on_time');
-            $table->boolean('canceled');
+            $table->string('code', 20)->unique();
+            $table->smallInteger('nr_carrozze')->nullable()->default(1);
+            $table->boolean('on_time')->default(true);
+            $table->boolean('canceled')->default(false);
             $table->timestamps();
         });
     }
