@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Train;
 class TrainList extends Controller
 {
     public function getData() {
-        return view('index');
+        $trains=Train::all();
+        return view('index', compact('trains'));
     }
 }
