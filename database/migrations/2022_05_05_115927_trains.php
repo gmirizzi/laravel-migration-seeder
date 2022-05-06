@@ -18,6 +18,7 @@ class Trains extends Migration
             $table->string('azienda', 50);
             $table->string('stazione_di_partenza', 100);
             $table->string('stazione_di_arrivo', 100);
+            $table->date('date');
             $table->time('orario_di_partenza', 0);
             $table->time('orario_di_arrivo', 0);
             $table->string('code', 20)->unique();
