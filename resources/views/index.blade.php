@@ -19,5 +19,6 @@
             <div>Nr. Carrozze: {{$item->nr_carrozze}}</div>
         </div>
     @endforeach
+    {{ $trains->links() }}
 </body>
 </html>
